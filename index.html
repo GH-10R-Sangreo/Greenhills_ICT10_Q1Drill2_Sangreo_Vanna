@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Basic Info</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    h1, h6 {
+            font-family: "Josefin Sans", sans-serif;
+            text-align: center;
+            margin: 10px auto;
+            color: grey;
+        }
+
+        .container-box {
+            background: grey;
+            margin: 10px auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 550px;
+            color: white;
+            font-family: "Josefin Sans", sans-serif;
+        }
+
+        label, button {
+            font-family: "Josefin Sans", sans-serif;
+        }
+
+</style>
+
+<body>
+
+    <h1>Student Basic Info</h1>
+    
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 30px;">
+  
+        <label for="name">Name</label><br>
+        <input id="name" type="text" placeholder="Enter your name"><br><br>
+
+        <label for="age">Age</label><br>
+        <input id="age" type="number" placeholder="Enter your age"><br><br>
+
+        <label for="school">School</label><br>
+        <input id="school" type="text" placeholder="Enter your school"><br><br>
+
+        <button py-click="generating_messages">Generate Messages</button>
+    
+        </div>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 container-box text-center">
+            <script type="py" src="./main.py"></script>
+
+            <div id="output" style="white-space: pre-wrap; margin-top: 20px; text-align: center; margin-left: auto; margin-right: auto; width: fit-content;"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
